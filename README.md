@@ -1,110 +1,54 @@
-# Belajar JavaScript Dasar
-## Syarat Penulisan
-1. Disimpan dengan esktensi .js
-2. tag <script> di dalam HTML
-3. Di dalam element <head> atau di akhir <body>
-ex:
-<!-- INTERNAL -->
-<script>
-    document.getElementById("text").innerHTML="Hello World"
-</script>
-<!-- EXTERNAL IN BODY -->
-<script src="./script.js"></script>
-<!-- EXTERNAL IN HEAD -->
-Harus menulis defer biar script ditunda sampai HTML selesai dimuat, sama seperti kita menulis script di bagian akhir body.
-<script src="./script.js" defer></script>
+# Vanilla JS Product Calculator & Core Fundamentals 🧮✨
 
-4. JavaScript bersifat CASE SENSITIVE
-5. Came case = hitungLuas
-6. Selalu diakhiri dengan tanda ";" (semicolon)
-7. Selector selalu (id="") tidak ada class seperti di CSS
-ex:
-<div id="text"></div>
+## 📝 Overview
+**Vanilla JS Product Calculator** is a functional web application designed to automate total price calculations for product inventories. This project serves as a practical implementation of **Vanilla JavaScript** fundamentals, demonstrating core concepts such as DOM manipulation, form handling, and event-driven programming without external libraries.
 
-1. Internal (Ditulis di bagian akhir sebelum penutup body)
-2. External dengan extension ".js" <-- BEST PRACTICE -->
+Beyond the utility, the project includes comprehensive documentation of JavaScript principles, making it an excellent resource for mastering the "SoC" (Separation of Concern) and "DRY" (Don't Repeat Yourself) methodologies.
 
+---
 
-## Prinsip Dasar
-1. SoC (Separation of Concern)
-Memisahkan logic dengan file struktur lainnya.
+## ✨ Key Features
+- **📊 Real-time Inventory Calculation**: Automatically computes total costs based on product name, quantity, and unit price.
+- **✅ Robust Input Validation**: Built-in logic to prevent empty fields or invalid numerical entries (negative numbers/zero).
+- **🌍 Dynamic ID-ID Currency Formatting**: Utilizes the `toLocaleString` API to display totals in professional Indonesian Rupiah (Rp) format.
+- **⚡ DOM Manipulation Engine**: Real-time UI updates (InnerText) that reflect calculation results instantly without page reloads.
+- **🎨 Responsive Clean UI**: A minimalist, centered flexbox interface designed for focus and ease of use.
 
-2. DRY (Don't Repeat Yourself)
+---
 
+## 🛠️ Technical Implementation
+- **Markup**: [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) (Semantic structure with deferred scripts)
+- **Styling**: [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) (Flexbox centering and material design tokens)
+- **Logic**: [ES6+ JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- **Core Concepts Applied**:
+    - **DOM Selection**: High-precision targeting using `document.getElementById`.
+    - **Data Normalization**: Explicit type casting using the `Number()` constructor for accurate mathematical operations.
+    - **Conditional Logic**: Efficient error handling and user feedback via native browser alerts.
+    - **Script Performance**: Strategic use of the `defer` attribute to optimize DOM readiness.
 
-## Function Scope & Block Scope
-Scope adalah ruang lingkup di mana sebuah variabel bisa diakses.
-1. Function Scope
-- Variabel hanya dapat diakses dari dalam fungsi tempat di mana variabel di deklarasikan.
-- Ini berlaku untuk variabel yang dideklarasi menggunakan "var".
-ex:
-function contohFunction() {
-  var pesan = "Halo!";
-  console.log(pesan); // ✅ Dapat diakses
-}
+---
 
-console.log(pesan); // ❌ Error: pesan is not defined
+## 📁 Repository Structure
+```text
+.
+├── index.html   # Semantic structure and form interface
+├── script.js    # Core calculation logic and DOM manipulation
+├── style.css    # Flexbox-driven layout and UI styling
+└── README.md    # Documentation of JS fundamentals and project guide
+```
 
-2. Block Scope
-- Variabel hanya dapat diakses dari dalam blok tempat variabel dideklarasikan, termasuk if, for, { }, dan lainnya.
-- Berlaku untuk let dan const.
-ex:
-if (true) {
-  let nama = "Dina";
-  const usia = 20;
-  console.log(nama); // ✅ Bisa
-}
+---
 
-console.log(nama); // ❌ Error: nama is not defined
+## 🚀 How to Explore locally
 
+1. **Clone the Project**
+   ```bash
+   git clone https://github.com/ftryyln/kalkulator-js.git
+   ```
+2. **Launch**
+   - Simply open `index.html` in your browser to start calculating.
 
-## Variabel
-Tiga cara deklarasi variabel di JavaScript:
-1. var
-- Cara lama untuk deklarasi variabel.
-- Memiliki function scope, bukan block scope.
-- Bisa dideklarasi ulang.
-- Hindari var kecuali ada alasan spesifik (misalnya saat menulis kode lama/legacy).
-ex:
-var nama = "saya";
-var umur = 25;
-
-2. let
-- Memiliki block scope
-- Dapat diubah nilainya, tapi tidak dapat dideklarasi ulang di scope yang sama.
-- Gunakan let jika nilai variabel dapat berubah.
-ex:
-let nama = "Budi";
-nama = "Rudi"; -> dapat ditulis seperti ini juga
-
-3. const
-- Memiliki block scope.
-- Nilainya tidak dapat diubah setelah dideklarasikan.
-- Wajib langsung diisi saat deklarasi.
-- Gunakan const jika nilai tetap (misal konfigurasi, konstanta).
-ex:
-const PI = 3.14;
-// PI = 3.15; // Error
-
-
-# Tipe Data
-1. String = "Laptop"
-2. Number = 10000
-3. Boolean =  true, false
-4. Array = ["Laptop","Mouse"]
-5. Object = {nama: "laptop, harga: 10000}
-
-
-# Operator Aritmatika
-+ - * / %
-
-
-# Example
-document.getElementById("text").innerHTML="Hello World";
-console.log
-console.log("Hello World");
-
-let jumlah = 2;
-let harga = 10000;
-let total = jumlah * harga;
-console.log("Total: ", total)
+---
+<p align="center">
+  Mastering the Logic of the Web. 🚀✨
+</p>
